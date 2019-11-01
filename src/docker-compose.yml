@@ -9,5 +9,6 @@ services:
       - ./ghost.db:/var/lib/ghost/content/data/ghost.db
     environment:
       - NODE_ENV=development
+      - url=http://localhost:3000
     ports:
       - 2368:2368
