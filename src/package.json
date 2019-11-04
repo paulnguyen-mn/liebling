@@ -1,6 +1,6 @@
 {
   "name": "liebling",
-  "version": "1.0.0",
+  "version": "0.5.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,8 @@
     "docker-watch": "docker-compose up -d && node node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production node node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && npm run zip",
     "zip": "run-script-os",
-    "zip:win32": "cd .. && 7z a -r -x!.git -x!src liebling.zip *",
-    "zip:default": "cd .. && zip -r liebling.zip ./* -x './src/*'"
+    "zip:win32": "cd .. && 7z a -r -x!.git -x!src liebling_$npm_package_version.zip *",
+    "zip:default": "cd .. && zip -r liebling_$npm_package_version.zip ./* -x './src/*'"
   },
   "keywords": [],
   "author": "",
